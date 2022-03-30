@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,19 @@
     <link rel="stylesheet" href="./style.css">
     <title>Vue Hello</title>
 </head>
+
 <body>
 
-    <div id = "root">
+    <div id="root">
 
-        <h1 :class = "f_center">{{ title }}</h1>
-        <img v-bind:class = "width" :src="image" alt="">
+        <h1 :class="f_center">{{ title }}</h1>
+
+        <div>
+            <input type="button" value="Click to hear the call lion" @click="play">
+            <audio ref="audio" src="./LionGrowlAngryGene PE931903.mp3"></audio>
+        </div>
+
+        <img v-bind:class="width" :src="image" alt="">
 
     </div>
 
@@ -20,4 +28,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>
